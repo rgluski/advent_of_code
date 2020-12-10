@@ -1,2 +1,2 @@
 # advent_of_code
-Advent of Code puzzles solution in Java
+My Java solutions for Advent of Code 2020
