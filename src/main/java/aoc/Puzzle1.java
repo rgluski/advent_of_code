@@ -2,6 +2,7 @@ package aoc;
 
 import java.util.List;
 
+import aoc.exceptions.UnsolvableException;
 import aoc.utils.InputReader;
 
 public class Puzzle1 implements Puzzle<int[]> {
@@ -15,31 +16,31 @@ public class Puzzle1 implements Puzzle<int[]> {
 	
 	@Override
 	public long resolvePart1(int[] data) {
-		int result = 0;
+
 		for(int i = 0; i < data.length; i++) {
 			for(int j = i + 1; j < data.length; j++) {
 				if(data[i] + data[j] == 2020) {
-					result = data[i] * data[j];
+					return data[i] * data[j];
 				}
 			}
 		}
 		
-		return result;
+		throw new UnsolvableException();
 	}
 	
 	@Override
 	public long resolvePart2(int[] data) {
-		int result = 0;
+		
 		for(int i = 0; i < data.length; i++) {
 			for(int j = i + 1; j < data.length; j++) {
 				for(int k = j + 1; k < data.length; k++) {
 					if(data[i] + data[j] + data[k] == 2020) {
-						result = data[i] * data[j] * data[k];
+						return data[i] * data[j] * data[k];
 					}
 				}
 			}
 		}
 		
-		return result;
+		throw new UnsolvableException();
 	}
 }

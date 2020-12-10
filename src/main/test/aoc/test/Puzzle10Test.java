@@ -14,7 +14,7 @@ class Puzzle10Test implements PuzzleTest {
 	private static Set<Integer> data;
 
 	@BeforeAll
-	public static void init(){
+	public static void setUpBeforeClass(){
 		data = new TreeSet<>();
 		data.add(28);
 		data.add(33);
