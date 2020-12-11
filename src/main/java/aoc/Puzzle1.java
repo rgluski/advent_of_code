@@ -20,7 +20,7 @@ public class Puzzle1 implements Puzzle<int[]> {
 		for(int i = 0; i < data.length; i++) {
 			for(int j = i + 1; j < data.length; j++) {
 				if(data[i] + data[j] == 2020) {
-					return data[i] * data[j];
+					return data[i] * data[j] * 1L;
 				}
 			}
 		}
@@ -35,7 +35,7 @@ public class Puzzle1 implements Puzzle<int[]> {
 			for(int j = i + 1; j < data.length; j++) {
 				for(int k = j + 1; k < data.length; k++) {
 					if(data[i] + data[j] + data[k] == 2020) {
-						return data[i] * data[j] * data[k];
+						return data[i] * data[j] * data[k] * 1L;
 					}
 				}
 			}
