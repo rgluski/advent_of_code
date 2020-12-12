@@ -52,29 +52,24 @@ public class FerryWithWaypoint implements Ferry {
 	}
 	
 	private void moveWaypointEastWest(int distance) {
-		if(waypointDirection1 == EAST) {
-			waypointPosition1 += distance;
-		} else if (waypointDirection1 == WEST) {
-			waypointPosition1 -= distance;
-		}
-		
-		if(waypointDirection2 == EAST) {
-			waypointPosition2 += distance;
-		} else if (waypointDirection2 == WEST) {
-			waypointPosition2 -= distance;
-		}
+		moveWaypoint(distance, EAST, WEST);
 	}
 	
 	private void moveWaypointNorthSouth(int distance) {
-		if(waypointDirection1 == NORTH) {
+		moveWaypoint(distance, NORTH, SOUTH);
+	}
+	
+	//Because of rotation implementation axis WE and SN swap between two sets of coordinates. This logic is to set correct one.
+	private void moveWaypoint(int distance, FerryAction action1, FerryAction action2) {
+		if(waypointDirection1 == action1) {
 			waypointPosition1 += distance;
-		} else if(waypointDirection1 == SOUTH) {
+		} else if (waypointDirection1 == action2) {
 			waypointPosition1 -= distance;
 		}
 		
-		if(waypointDirection2 == NORTH) {
+		if(waypointDirection2 == action1) {
 			waypointPosition2 += distance;
-		} else if(waypointDirection2 == SOUTH) {
+		} else if (waypointDirection2 == action2) {
 			waypointPosition2 -= distance;
 		}
 	}
