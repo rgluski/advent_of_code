@@ -1,7 +1,7 @@
 package aoc;
 
 public class AdventOfCodeMain {
-	private static final int PUZZLES_DONE = 11;
+	private static final int PUZZLES_DONE = 12;
 	
 	public static void main(String[] args) throws Exception {
 		for(int id = 1; id <= PUZZLES_DONE; id++) {

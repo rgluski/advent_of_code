@@ -40,5 +40,4 @@ class Puzzle11Test implements PuzzleTest {
 		var puzzle11 = new Puzzle11();
 		assertTrue(puzzle11.resolvePart2(data) == 26);
 	}
-
 }
