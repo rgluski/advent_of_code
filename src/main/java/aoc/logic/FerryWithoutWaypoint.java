@@ -6,7 +6,7 @@ import static aoc.enums.FerryAction.SOUTH;
 import static aoc.enums.FerryAction.WEST;
 
 import aoc.enums.FerryAction;
-import aoc.utils.CircularList;
+import aoc.types.CircularList;
 
 public class FerryWithoutWaypoint implements Ferry {
 	private final CircularList<FerryAction> directions = CircularList.of(EAST, SOUTH, WEST, NORTH);
